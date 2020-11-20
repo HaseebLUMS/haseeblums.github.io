@@ -217,4 +217,14 @@ layout: default
 		<li>I really love teaching which is one of the reasons of doing five TA-ships during my undergrad.  </li>
 	</ul>
 </div>
+<script>
+	var el = $('body > header > .container > h2');
+	var colors = ['red', 'green', 'blue', 'while', 'yellow', 'aqua', 'coral', 'chocolate', 'cornsilk', 'khaki', 'ivory', 'salmon', 'pink', 'yellow'];
+	ind = 0;
+	setInterval(function() {
+        	el.style.color = colors[ind];
+		ind++;
+		ind = ind%colors.length;
+    	}, 200);
+</script>
 </body>
