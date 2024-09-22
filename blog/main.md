@@ -1,1 +1,0 @@
-- [Efficiently sending packets to multiple destinations](./fanout/main.md)
