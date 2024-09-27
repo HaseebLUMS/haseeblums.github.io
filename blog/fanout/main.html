@@ -59,17 +59,17 @@
         <p>We will discuss a simple use case that I encountered in my recent research project.</p>
         <pre><code>What is a low latency way to send packets from a VM to multiple VMs?</code></pre>
         <p>We will compare three techniques:</p>
-        <li>Naive: <code>sendto</code> to each destination</li>
-        <li>io-uring: batch multiple <code>sendto </code>with io-uring</li>
-        <li>TC/eBPF: one <code>sendto</code> from userspace, capturing and replicating with eBPF</li>
+        <li>Naive: <code>`sendto`</code> to each destination</li>
+        <li>io-uring: batch multiple <code>`sendto`</code>with io-uring</li>
+        <li>TC/eBPF: one <code>`sendto`</code> from userspace, capturing and replicating with eBPF</li>
+        <img src="./overview.svg" alt="Overview of three techniques" style="width: 100%; margin-bottom: 20px;">
+        <h2>Naive Approach</h2>
         <p>The <code>sendto</code> function is used in UNIX-based systems for sending messages to a specific destination.
             If we want to send a packet to multiple destinations, we can invoke sendto multiple times, once for each destination.
-            This is the naive approach and is not efficient for large number of destinations as each invocation of sendto 
-            leads to a syscall and a userspace to kernel space context switch.
-            We will discuss how we can improve this using io-uring and TC/eBPF.</p>
+            This approach is not efficient for large number of destinations as each invocation of sendto 
+            leads to a syscall and a user space to kernel space context switch.
         </p>
 
-        <img src="./overview.svg" alt="Overview of three techniques" style="width: 100%; margin-bottom: 20px;">
     </div>
 </body>
 </html>
