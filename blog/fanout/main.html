@@ -63,12 +63,21 @@
         <li>io-uring: batch multiple <code>`sendto`</code>with io-uring</li>
         <li>TC/eBPF: one <code>`sendto`</code> from userspace, capturing and replicating with eBPF</li>
         <img src="./overview.svg" alt="Overview of three techniques" style="width: 100%; margin-bottom: 20px;">
-        <h2>Naive Approach</h2>
+        <h3>Naive Approach</h3>
         <p>The <code>sendto</code> function is used in UNIX-based systems for sending messages to a specific destination.
             If we want to send a packet to multiple destinations, we can invoke sendto multiple times, once for each destination.
             This approach is not efficient for large number of destinations as each invocation of sendto 
             leads to a syscall and a user space to kernel space context switch.
         </p>
+
+        <h3>Batching with io-uring</h3>
+        <p>Instead of invoking <code>sendto</code> multiple times, we can batch all the invocations using io-uring.
+            io-uring allows us to batch multiple I/O operations and submit them to the kernel in a single syscall.
+            This reduces the number of syscalls and context switches, improving the overall performance.
+        </p>
+
+        <h3>Replicating with eBPF</h3>
+        TODO
 
     </div>
 </body>
