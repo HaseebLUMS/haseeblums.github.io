@@ -12,9 +12,10 @@
             padding: 0;
             display: flex;
             justify-content: center;
-            align-items: center;
-            height: 100vh;
+            align-items: flex-start; /* Align items to the top instead of center */
+            min-height: 100vh; /* Allow the content to grow taller if needed */
         }
+
         .content {
             background-color: #fff;
             padding: 40px;
