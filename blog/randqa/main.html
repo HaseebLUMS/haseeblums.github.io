@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sending Packets to Multiple Destinations</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Align items to the top instead of center */
+            min-height: 100vh; /* Allow the content to grow taller if needed */
+        }
+
+        .content {
+            background-color: #fff;
+            padding: 40px;
+            max-width: 800px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            line-height: 1.6;
+        }
+        h1 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        p {
+            /* font-size: 1.1rem; */
+            color: #555;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-left: 5px solid #007bff;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1rem;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .highlight {
+            color: #007bff;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+    <p>Q1: Tiled matrix multiplication is faster than non-tiled, why?
+    </p> <p>A1: Tiling fetches data to shared memory that increases locality.  
+    </p>
+
+    <p>Q2: Online softmax is faster than naive softmax. why?</p>
+    <p>A2: Online softmax reduces the number of loads/stores from memory (from 4 to 3) </p>
+
+    </div>
+</body>
+</html>
