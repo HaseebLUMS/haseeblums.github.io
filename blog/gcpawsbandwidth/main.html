@@ -212,6 +212,19 @@
                 <td>25</td>
             </tr>
         </table>
+
+        On server:<br>
+        <code>iperf3 -s</code>
+        <br><br>
+        On client:<br>
+        <code>iperf3 -c SERVER_IP -b AVAILABLE_BANDWIDTH -l PACKET_SIZE -u</code> for UDP<br>
+        <code>iperf3 -c SERVER_IP -b AVAILABLE_BANDWIDTH -l PACKET_SIZE</code> for TCP<br>
+
+        Example on GCP: <code>iperf3 -c 10.150.0.20 -b 16G -l 500 -u</code><br>
+        The output (<code>Bitrate</code> field) of iperf3 on client side was observed for getting the above numbers. <br>
+        Private IPs were used. Both client and server were in the same AZ. <br>
+        No placement groups utilized.<br>
+
     </div>
 </body>
 </html>
