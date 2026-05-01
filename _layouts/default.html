@@ -11,6 +11,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
     {% include head-custom.html %}
+    <style>
+      @media print, screen and (min-width: 960px) {
+        .wrapper { width: 900px; }
+        header { width: 200px; }
+        section { width: 660px; }
+      }
+    </style>
   </head>
   <body>
     <div class="wrapper">
