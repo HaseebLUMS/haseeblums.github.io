@@ -13,9 +13,34 @@
     {% include head-custom.html %}
     <style>
       @media print, screen and (min-width: 960px) {
-        .wrapper { width: 900px; }
-        header { width: 200px; }
-        section { width: 660px; }
+        .wrapper {
+          width: auto;
+          max-width: 1180px;
+          margin: 0 0 0 60px;
+          padding-right: 40px;
+        }
+        header {
+          width: 240px;
+          padding-right: 30px;
+          border-right: 1px solid #e5e5e5;
+        }
+        section {
+          width: auto;
+          margin-left: 290px;
+          max-width: 820px;
+          float: none;
+        }
+      }
+      header img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 6px;
+      }
+      header h1 {
+        margin-top: 14px;
+      }
+      header .view {
+        margin: 6px 0;
       }
     </style>
   </head>
