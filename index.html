@@ -269,6 +269,32 @@ layout: default
 		</div>
 	</div>
 
+	<div class="Select Projects" style="border-bottom: green ridge;">
+		<h1><b> Select Projects</b></h1>
+		<div class="list">
+			<div class="p1" style="padding-bottom: 5px">
+				<b> Low Latency and Latency-Fair Financial Exchange on Public Cloud</b>
+				<p style="padding-left: 30px">
+				<ul>
+					<li>Designed a low-latency (DPDK based) and highly scalable multicast mechanism where the latency difference across any two receivers is under 1 microsecond.</li>
+					<li>Developed techniques to keep latency stable by hedging against various sources of latency fluctuation.</li>
+					<li>Built a domain-specific priority queue that increases the throughput of an order-matching engine during bursty network activity.</li>
+					<li>Prototyped on AWS and GCP. 
+				</ul>
+				</p>
+			</div>
+			<div class="p1" style="padding-bottom: 5px">
+				<b> Probabilistic Fair Ordering of Events</b>
+				<p style="padding-left: 30px">
+				<ul>
+					<li>A sequencer that orders events by their occurrence, useful when inter-event durations are smaller than the clock accuracy.</li>
+					<li>A probabilistic technique estimates the likelihood of one event preceding another, relying clients' local timestamps and their clocks' error distributions. </li>
+					<li>Uses tools from Social Choice Theory to handle the intransitivity of the probabilistic comparator.</li>
+				</ul>
+				</p>
+			</div>
+		</div>
+	</div>
 	<div class="Patents" style="border-bottom: green ridge;">
 		<h1><b> Patents</b></h1>
 		<div class="list">
